@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Share+Tech&display=swap" rel="stylesheet">
+        <title>Calkulator Suhu</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+<!-- MAIN -->
+        <main>
+<!-- KONTAINER 1 (title, label, input, output) -->
+            <div class="container element">
+                <div class="inner-container ">
+                    <h1>Kalkulator Suhu (°C ⇄ °F)</h1>
+                    <p id="introText">Masukkan suhu derajat <strong>Celsius (°C)</strong> ke kotak dibawah, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (°F).</p>
+                    <div class="labels">
+                        <div class="input">
+                            <label for="inputTemp">Celcius (°C)</label>
+                            <input id="inputTemp" type="number">
+                        </div>
+                        <div class="output">
+                            <label for="outputTemp">Fahrenheit (°F):</label>
+                            <span id="outputTemp" readonly></span>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                    <button onclick="convertTemp()">Konversi</button>
+                    <button onclick="resetForm()">Reset</button>
+                    <button onclick="reverseConversion()">Reverse</button><br><br>
+                    </div>
+                </div>
+            </div>
+<!-- KONTAINER 2 (RUMUS DAN PENJELASAN)-->
+            <div class="container element">
+                <div class="inner-container">
+                    <div class="kalkulasi">
+                        <label for="explanation">Cara Kalkulasi:</label>
+                        <span id="explanation"></span>
+                    </div>
+                </div>
+                <p class="a-link"><a href="#">Celsius ke Fahrenheit</a></p>
+                <div class="inner-container">
+                    <h3 id="conversionTitle">Cara Konversi Dari Celsius (°C) ke Fahrenheit (°F)</h3>
+                    <p id="conversionExplanation">
+                        Suhu <strong>S</strong> dalam derajat Fahrenheit (°F) sama dengan suhu <strong>S</strong> dalam derajat Celsius (°C) kali <strong>9/5</strong> tambah <strong>32</strong>.<br><br>
+                        <strong>S(°F)</strong> = <strong>(S(°C) × 9/5) + 32</strong><br>
+                        atau<br>
+                        <strong>S(°F)</strong> = <strong>(S(°C) × 1.8) + 32</strong>
+                    </p>
+                </div>
+            </div>
+        </main>
+<!-- FOOTER -->
+        <footer>
+            <h2>Create by <a class="footer" href="https://github.com/msalmanrafadhlih">
+                (Moch)Salmanrafadhlih</a></h2>
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
+</html>

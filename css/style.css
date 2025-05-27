@@ -1,0 +1,225 @@
+body {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  background-color: #222831;
+  color: #393E46;
+
+}
+
+/* BOX UTAMA (KONTAINER) */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 100%;
+    margin: 30px;
+}
+
+.container {
+  width: 40vw;
+  height: 100%;
+  max-height: 50em;
+  top: 50px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow:
+    5px 2px 10px rgba(0, 0, 0, 1),
+    -5px -10px 10px rgba(255, 255, 255, 0.1);
+}
+
+.inner-container {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  background: #00ADB5;
+  border: 1px solid #00ADB0;
+  padding: 25px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.element {
+  position: relative;
+  z-index: 1;
+  background: rgb(146, 167, 176);
+}
+
+.element::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  margin: 5px;
+  background: #5b5757;
+  border-radius: 8px;
+  filter: blur(1px);
+  z-index: -1;
+  -webkit-filter: blur(2px);
+}
+
+/* MLAUI DARI  TITLES */
+h1 {
+  text-align: center;
+  margin: 0 0 30px 0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+    display: block;
+    margin: 0;
+}
+
+/* BAGIAN LABELS */
+
+.labels {
+  margin: 0;
+  display: flex;
+  background-color: transparent;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  border: 2px solid;
+  margin: 30px 5px;
+  justify-content: space-around;
+  padding: 30px 10px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+
+}
+
+
+.input, .output {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 200px;
+}
+
+label {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+#outputTemp,
+#inputTemp {
+  font-size: 20px;
+  text-align: center;
+  height: 30px;
+  width: 100%;
+  max-width: 200px;
+  font-weight: bold;
+  color: #393E46;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+}
+
+button {
+  flex-wrap: wrap;
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 150px;
+}
+
+/* BAG EXPLANATION */
+
+a {
+  color: #21fbff;
+  text-decoration: none;
+}
+
+.a-link {
+  margin: 5px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+span {
+  border: #00ADB5;
+  /* background-color: white; */
+}
+.kalkulasi {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+  padding: 10px;
+}
+#explanation {
+  width: 100%;
+  /* font-weight: lighter; */
+  max-width: 500px;
+  height: 30px;
+  font-size: 20px;
+  text-align: left;
+  margin: 1px;
+  padding: 5px;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  height: 200px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  color: #00b2b5;
+}
+
+
+
+/* MEDIA QUERY (RESPONSIVE) */
+
+@media (max-width: 930px) {
+    .container {
+      width: 100%;
+
+    }
+    .kalkulasi {
+      display: flex;
+      flex-direction: column;
+      column-gap: 30px;
+      align-items: center;
+    }
+    #explanation {
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+    }
+}
